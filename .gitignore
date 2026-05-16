@@ -1,0 +1,26 @@
+# Dependências
+/vendor/
+
+# Banco de dados
+/storage/database/*.db
+/storage/database/*.sqlite
+
+# Logs
+/storage/logs/*.log
+
+# Cache
+/storage/cache/*
+!/storage/cache/.gitkeep
+
+# Configurações locais
+/config/local.php
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema
+.DS_Store
+Thumbs.db
