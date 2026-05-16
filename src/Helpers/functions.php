@@ -13,16 +13,24 @@
  */
 function view(string $view, array $data = []): void
 {
+    // Inicia sessão se ainda não foi iniciada
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    
     // Extrai os dados para variáveis
     extract($data);
     
-    // Caminho da view
-    $viewPath = __DIR__ . "/../Views/{$view}.php";
+    // Define o conteúdo a ser carregado
+    $content = $view;
     
-    if (file_exists($viewPath)) {
-        require $viewPath;
+    // Carrega o layout principal
+    $layoutPath = __DIR__ . "/../Views/layouts/main.php";
+    
+    if (file_exists($layoutPath)) {
+        require $layoutPath;
     } else {
-        die("View não encontrada: {$view}");
+        die("Layout não encontrado: layouts/main.php");
     }
 }
 
