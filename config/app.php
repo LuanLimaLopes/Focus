@@ -18,7 +18,7 @@ return [
     'timezone' => 'America/Sao_Paulo',
     
     // URL base da aplicação
-    'url' => 'http://localhost/focus',
+    'url' => 'http://localhost:8080/focus/',
     
     // Caminho raiz do projeto
     'root_path' => dirname(__DIR__),
